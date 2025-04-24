@@ -19,3 +19,7 @@
 .deleteButton {
     background-color: red;
 }
+
+.upvoteButton:hover {
+    cursor: pointer;
+}

@@ -19,8 +19,6 @@ const Create = () => {
 
     const add = async (event) => {
         event.preventDefault();
-        
-        console.log("added");
 
         await supabase
         .from('Posts')

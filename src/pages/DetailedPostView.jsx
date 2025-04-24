@@ -6,7 +6,7 @@ import Post from "../components/Post";
 
 const DetailedPostView = () => {
     const {id} = useParams();
-    const [post, setPost] = useState({title: "", content: "", img_url: "", upvotes: 0, comments: []});
+    const [post, setPost] = useState({title: "", content: "", img_url: "", upvotes: 0, comments: [], created_at: ""});
 
     useEffect(() => {
         const getInfo = async () => {
@@ -23,7 +23,8 @@ const DetailedPostView = () => {
                     content: data[0].content,
                     img_url: data[0].img_url,
                     upvotes: data[0].upvotes,
-                    comments: data[0].comments
+                    comments: data[0].comments,
+                    created_at: data[0].created_at
                 }
             })
         };
@@ -34,7 +35,7 @@ const DetailedPostView = () => {
         <div>
             <Header></Header>
             <p>Post</p>
-            <Post id={id} title={post.title} content={post.content} img_url={post.img_url} comments={post.comments} upvotes={post.upvotes}></Post>
+            <Post id={id} title={post.title} content={post.content} img_url={post.img_url} comments={post.comments} upvotes={post.upvotes} created_at={post.created_at.substring(0,10)}></Post>
         </div>
     );
 }
