@@ -14,19 +14,16 @@ const ViewPosts = () => {
             .from('Posts')
             .select()
             .order('created_at', {ascending: false});
+            console.log(creationData);
             setPostsOrderedByCreation(creationData);
-            //console.log(data);
-
             const {data: upvoteData} = await supabase
             .from('Posts')
             .select()
             .order('upvotes', {ascending: false});
-            setPostsOrderedByUpvotes(upvoteData);
             console.log(upvoteData);
+            setPostsOrderedByUpvotes(upvoteData);
         }
         fetchPosts();
-        //console.log(postsOrderedByCreation);
-        //console.log(postsOrderedByUpvotes);
      }, []);
 
     return (

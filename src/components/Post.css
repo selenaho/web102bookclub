@@ -1,0 +1,21 @@
+.moreButton {
+    width: 30px;
+    float:right;
+
+}
+.moreButton:hover {
+    cursor: pointer;
+}
+
+.Post {
+    border: 1px solid;
+    border-radius: 10px;
+    
+    margin: 10px;
+    padding: 10px;
+    width: 800px;
+}
+
+.deleteButton {
+    background-color: red;
+}
