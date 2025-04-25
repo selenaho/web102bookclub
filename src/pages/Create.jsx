@@ -7,8 +7,8 @@ const Create = () => {
 
     const handleChange = (event) => {
         const {name, value} = event.target;
-        console.log(name);
-        console.log(value);
+        //console.log(name);
+        //console.log(value);
         setPost((prev) => {
             return({
                 ...prev,

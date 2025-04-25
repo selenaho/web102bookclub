@@ -7,11 +7,13 @@ import { useState, useEffect } from "react";
 
 const Post = (props) => {
     const [upvotes, setUpvotes] = useState(props.upvotes);
-    const[comments, setComments] = useState(props.comments);
+    const[comments, setComments] = useState(props.comments || []);
     const [newComment, setNewComment] = useState("");
 
     useEffect(() => {
-        setComments(props.comments);
+        if (Array.isArray(props.comments)) {
+            setComments(props.comments);
+        }
     }, [props.comments]);
 
     const updateUpvote = async () => {
@@ -35,24 +37,23 @@ const Post = (props) => {
     }
 
     const handleChange = (event) => {
-        console.log(comments);
+        //console.log(comments);
         const {value} = event.target;
+        //console.log(value);
         setNewComment(value);
     }
 
     const addComment = async (event) => {
         event.preventDefault();
 
-        const newArray = comments.concat(newComment);
-        console.log(comments);
-        console.log(newArray);
+        const newArray = [...comments, newComment];
+        setComments([...comments, newComment]);
 
         await supabase
         .from("Posts")
         .update({comments: newArray})
         .eq('id', props.id);
 
-        setComments(newArray);
         setNewComment("");
     }
 

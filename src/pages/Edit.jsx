@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { supabase } from "../client";
 import { useParams } from "react-router";
+import "./Edit.css"
 
 const Edit = () => {
     const {id} = useParams();
@@ -28,7 +29,7 @@ const Edit = () => {
 
     const handleChange = (event) => {
         const {name, value} = event.target;
-        console.log(value);
+        // console.log(value);
         setPost((prev) => {
             return({
                 ...prev,
@@ -40,9 +41,9 @@ const Edit = () => {
     const edit = async (event) => {
         event.preventDefault();
 
-        console.log(post.title);
-        console.log(post.content);
-        console.log(post.img_url);
+        // console.log(post.title);
+        // console.log(post.content);
+        // console.log(post.img_url);
 
         await supabase
         .from('Posts')

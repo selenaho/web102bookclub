@@ -15,7 +15,7 @@ const DetailedPostView = () => {
             .select("*")
             .eq('id', id);
 
-            console.log(data[0].comments);
+            //console.log(data[0].comments);
             setPost((prev) => {
                 return {
                     ...prev,
@@ -34,7 +34,6 @@ const DetailedPostView = () => {
     return (
         <div>
             <Header></Header>
-            <p>Post</p>
             <Post id={id} title={post.title} content={post.content} img_url={post.img_url} comments={post.comments} upvotes={post.upvotes} created_at={post.created_at.substring(0,10)}></Post>
         </div>
     );
