@@ -2,14 +2,13 @@
 
 Submitted by: **Selena Ho**
 
-This web app: **is a forum for people to post about all things bookish**
+This web app: **is a forum for people to post about all things books**
 
-Time spent: **X** hours spent in total
+Time spent: **5.5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
-
 
 - [X] **Web app includes a create form that allows the user to create posts**
   - Form requires users to add a post title
@@ -37,13 +36,11 @@ The following **required** functionality is completed:
   - Each post includes an upvote button on the post page. 
     - Each click increases the post's upvotes count by one
     - Users can upvote any post any number of times
-
 - [X] **A post that a user previously created can be edited or deleted from its post pages**
   - After a user creates a new post, they can go back and edit the post
   - A previously created post can be deleted from its post page
 
 The following **optional** features are implemented:
-
 
 - [ ] Web app implements pseudo-authentication
   - Users can only edit and delete posts or delete comments by entering the secret key, which is set by the user during post creation
@@ -61,15 +58,11 @@ The following **optional** features are implemented:
   - Users can upload images directly from their local machine as an image file
 - [ ] Web app displays a loading animation whenever data is being fetched
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/selenaho/web102bookclub/blob/main/finalproj.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif 

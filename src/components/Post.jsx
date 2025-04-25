@@ -6,9 +6,13 @@ import { supabase } from "../client";
 import { useState, useEffect } from "react";
 
 const Post = (props) => {
-    const [upvotes, setUpvotes] = useState(props.upvotes);
+    const [upvotes, setUpvotes] = useState(props.upvotes || 0);
     const[comments, setComments] = useState(props.comments || []);
     const [newComment, setNewComment] = useState("");
+
+    useEffect(() => {
+        setUpvotes(props.upvotes);
+    }, [props.upvotes]);
 
     useEffect(() => {
         if (Array.isArray(props.comments)) {
